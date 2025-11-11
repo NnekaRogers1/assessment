@@ -5,6 +5,6 @@ output "cloudtrail_arn" {
 
 output "guardduty_detector_id" {
   description = "ID of the GuardDuty detector"
-  value       = aws_guardduty_detector.main.id
+  value       = data.aws_guardduty_detector.main.id
 }
 
