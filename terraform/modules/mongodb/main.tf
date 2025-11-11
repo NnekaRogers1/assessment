@@ -113,6 +113,7 @@ resource "aws_instance" "mongodb" {
   vpc_security_group_ids = [aws_security_group.mongodb.id]
   iam_instance_profile   = aws_iam_instance_profile.mongodb.name
   key_name               = var.key_name
+  associate_public_ip_address = true
   
   ebs_optimized     = true
   monitoring        = true
