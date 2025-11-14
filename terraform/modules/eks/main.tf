@@ -82,7 +82,7 @@ resource "aws_eks_node_group" "main" {
     min_size     = 1
   }
   
-  instance_types = ["t3.medium"]
+  instance_types = ["g4dn.xlarge"]
   
   depends_on = [
     aws_iam_role_policy_attachment.node_group_policy
