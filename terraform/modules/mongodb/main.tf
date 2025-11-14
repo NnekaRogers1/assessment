@@ -108,7 +108,7 @@ data "aws_ami" "ubuntu_20" {
 
 resource "aws_instance" "mongodb" {
   ami                    = data.aws_ami.ubuntu_20.id
-  instance_type          = "t3.medium"
+  instance_type          = "g4dn.xlarge"
   subnet_id              = var.public_subnet_ids[0]
   vpc_security_group_ids = [aws_security_group.mongodb.id]
   iam_instance_profile   = aws_iam_instance_profile.mongodb.name
